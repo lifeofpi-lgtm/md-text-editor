@@ -1,0 +1,6 @@
+.build/
+*.xcodeproj
+.DS_Store
+outputs/MDmaster.app
+CLAUDE.md
+handoff.md
