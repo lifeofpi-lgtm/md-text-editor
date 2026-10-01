@@ -200,3 +200,34 @@ Export keeps the branded output. Reverses "DOCX export routes to the existing md
 **MIT license; CLAUDE.md and handoff.md untracked and gitignored.** Why: they hold local paths and
 working notes. decisions.md stays as the public design log. The files remain on disk for the
 handoff protocol, but they are no longer committed, so they will not travel with the repo.
+
+## 2026-10-01. Fresh repo for the public release instead of rewriting history
+Decided: publish from a new repo with a single initial commit, and archive the old history locally.
+**Why:** the old history held two personal author emails and the old CLAUDE.md and handoff.md with local
+paths. Only a fresh repo clears all of it in one step. The project had no stars, forks or issues to lose.
+**Rejected:** rewriting authors with filter-branch and force-pushing. It would keep commit messages but leave
+the old internal notes in history unless those were stripped too, and it was riskier.
+
+## 2026-10-01. Delete the old GitHub repo rather than rename it to an archive
+Decided: delete `md-text-editor` and recreate it, relying on the local archive for history.
+**Why:** a renamed private repo would keep the emails on GitHub, which defeats the cleanup.
+**Rejected:** renaming to `md-text-editor-archive` as a remote backup.
+
+## 2026-10-01. Keep the bundle ID co.shapeandscale.MDmaster
+**Why:** it is invisible to users, uses a domain Irshad controls, and changing it would reset saved
+preferences, toolbar layout and the last library folder.
+**Rejected:** a personal ID such as com.lifeofpi.MDmaster. Can be changed before notarisation.
+
+## 2026-10-01. Include the logo zip in the public repo
+Decided: ship `Sources/MDmaster Logo Design.zip` under the repo's MIT license.
+**Why:** Irshad confirmed they hold the rights.
+
+## 2026-10-01. Public profile README lists only projects that are already public
+Decided: create `lifeofpi-lgtm/lifeofpi-lgtm`, list MissionQuit first, add MDmaster once public (done the same
+session). Wording was Irshad's own line, not embellished.
+**Why:** a link to a private repo would 404 for visitors.
+
+## 2026-10-01. New commits use the GitHub noreply address; old MissionQuit emails left alone
+Decided: set the noreply address as the repo-local git email for repos touched this session. Irshad chose not
+to rewrite MissionQuit's six existing commits, which show the Gmail address.
+**Why:** avoids adding new personal-email commits. A MissionQuit history reset would break its already-public URL.
