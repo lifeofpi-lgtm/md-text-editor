@@ -231,3 +231,9 @@ session). Wording was Irshad's own line, not embellished.
 Decided: set the noreply address as the repo-local git email for repos touched this session. Irshad chose not
 to rewrite MissionQuit's six existing commits, which show the Gmail address.
 **Why:** avoids adding new personal-email commits. A MissionQuit history reset would break its already-public URL.
+
+## 2026-10-02. Push handoff commits to the public repo at session end
+Decided: decisions.md is public, so each session-end docs commit is pushed to origin/main after a check that it
+holds no emails, local paths or client data. handoff.md stays gitignored and never published.
+**Why:** a public design log that lags the work is misleading, and the check keeps the private notes private.
+**Rejected:** leaving docs commits local until a release. The log would fall behind with no benefit.
